@@ -25,7 +25,7 @@ There are two Network Models:
 
 ## The OSI Model
 
-The **Open Systems Interconnection** (OSI) Model is an ISO standard that covers all aspects of a network communication.
+The **Open Systems Interconnection** (OSI) Model is an **International Standard Organisation**(ISO) standard that covers all aspects of a network communication.
 
 The OSI model is a *layered framework* for the design of network systems that allows communication between all types of computer systems regardless of their underlying architecture.
 
@@ -57,13 +57,13 @@ At **Higher Layers**, communication must move down through layers on A, over to 
 
 Each layer in the sending device add its own information to the message it receives from layers above it and passes the whole package to the layer below it.
 
-Layer 1 convert message to a form that can be transmitted(electrical, optical, etc) to receiving device.
+Layer 1 (Physical Layer) convert message to a form that can be transmitted(electrical, optical, etc) to receiving device.
 
 Each layer in the receiving device, unwraps the message layer by layer, with each process receiving and removing the data meant for it and moving it upwards.
 
 **Interface between layers**: The passing of the data and network information down through the layers of the sending device and back up through the layers of the receiving device is made possible by an *interface* between each pair of adjacent layers.
 
-An Interface between layers define the information and services a layer must provide for the layer above it. This provides modularity to a network, the specific implementation of a layer can be modified without requiring a change to surrounding layers as long as the layers provides the expected services to the layer above it.
+*An Interface between layers define the information and services a layer must provide for the layer above it*. This provides modularity to a network, the specific implementation of a layer can be modified without requiring a change to surrounding layers as long as the layers provides the expected services to the layer above it.
 
 **Organization of layers**: 
 
@@ -97,7 +97,7 @@ The data units then move back up through OSI layers and the headers and trailers
 
 ---
 
-To learn more about each layer and its functions, read - [Layers of OSI Model](./layers-osi-model.md)
+To learn more about each layer and its functions, read - [Layers of OSI Model](./layers-osi-model-2.md)
 
 ---
 

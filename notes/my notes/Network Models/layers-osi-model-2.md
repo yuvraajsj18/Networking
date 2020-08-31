@@ -188,7 +188,7 @@ Example of services:
 
 1. DATA COMMUNICATIONS AND NETWORKING, Behrouz A. Forouzan, 4th edition.
 2. [Studytonight.com - The OSI Model - Features, Principles, and Layers](https://www.studytonight.com/computer-networks/complete-osi-model)
-3. [GeeksforGeeks - Layers of OSI Model]([https://www.geeksforgeeks.org/layers-of-osi-model/#:~:text=Bit%20synchronization%3A%20The%20physical%20layer,of%20bits%20sent%20per%20second.](https://www.geeksforgeeks.org/layers-of-osi-model/#:~:text=Bit synchronization%3A The physical layer,of bits sent per second.))
+3. [GeeksforGeeks - Layers of OSI Model](http://disq.us/t/3hf3dhx )
 
 ---
 

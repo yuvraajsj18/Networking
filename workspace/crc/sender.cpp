@@ -15,7 +15,8 @@ using namespace std;
 string mod2division(string message);
 int ctoi(char ch);
 char itoc(int i);
-bool message_is_valid(string message);
+bool message_is_valid(string message);\
+
 
 int main()
 {

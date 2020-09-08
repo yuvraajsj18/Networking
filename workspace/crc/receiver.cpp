@@ -15,14 +15,21 @@ using namespace std;
 string mod2division(string message);
 int ctoi(char ch);
 char itoc(int i);
+bool message_is_valid(string message);
 
 int main()
 {
     string message;
     
     // input message
-    cout << "Enter message in binary(9 bits): ";
+    cout << "Enter message received in binary(9 bits): ";
     getline(cin, message);
+
+    if (!message_is_valid(message))
+    {
+        cout << "Invalid message input" << endl;
+        exit(1);
+    }
 
     string remainder = mod2division(message);
 
@@ -78,9 +85,22 @@ char itoc(int i)
     return '0' + i;
 }
 
+bool message_is_valid(string message)
+{
+    int msg_len = message.length();
+    for (int i = 0; i < msg_len; i++)
+    {
+        if (message[i] != '1' && message[i] != '0')
+            return false;
+    }
+
+    return true;
+}
+
+
 /*
 Output 1:
-    Enter message in binary(9 bits): 101010001
+    Enter message received in binary(9 bits): 101010001
     Message received without error.
 
 Output 2:

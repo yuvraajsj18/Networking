@@ -9,7 +9,8 @@
 #include <string>
 using namespace std;
 
-string mod2division(string message);
+string encode_crc(string message, string gx);
+string mod2division(string message, string gx);
 int ctoi(char ch);
 char itoc(int i);
 bool message_is_valid(string message);
@@ -28,27 +29,37 @@ int main()
         exit(1);
     }
 
-    string remainder = mod2division(message);
-
-    string encoded_msg = message + remainder;
+    string gx = "1011";
+    string encoded_msg = encode_crc(message, gx);
 
     cout << "Message to send is " << encoded_msg << endl;
 
     return 0;
 }
 
-string mod2division(string message)
+string encode_crc(string message, string gx)
 {
     int message_bits = message.length();
-    int checkbits = 3;
-
+    int checkbits = gx.length() - 1;
+    string padded_msg = message;
     // append r 0's
     for (int i = message_bits; i < message_bits + checkbits; i++)
     {
-        message += '0';
+        padded_msg += '0';
     }
 
-    string divisor = "1011";
+    string remainder = mod2division(padded_msg, gx);
+
+    string encoded_msg = message + remainder;
+
+    return encoded_msg;
+}
+
+string mod2division(string message, string gx)
+{
+    int checkbits = gx.length() - 1;
+
+    string divisor = gx;
     int msg_length = message.length();
 
     int i = 0;

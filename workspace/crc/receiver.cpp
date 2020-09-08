@@ -9,6 +9,7 @@
 #include <string>
 using namespace std;
 
+bool decode_crc(string messsage);
 string mod2division(string message);
 int ctoi(char ch);
 char itoc(int i);
@@ -28,9 +29,7 @@ int main()
         exit(1);
     }
 
-    string remainder = mod2division(message);
-
-    if (stoi(remainder) == 0)
+    if (decode_crc(message))
     {
         cout << "Message received without error." << endl;
     }
@@ -40,6 +39,16 @@ int main()
     }
 
     return 0;
+}
+
+bool decode_crc(string message)
+{
+    string remainder = mod2division(message);
+
+    if (stoi(remainder) == 0)
+        return true;
+    else
+        return false;
 }
 
 string mod2division(string message)

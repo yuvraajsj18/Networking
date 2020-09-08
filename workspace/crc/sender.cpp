@@ -9,14 +9,10 @@
 #include <string>
 using namespace std;
 
-#define message_bits 6  // bits in m
-#define checkbits 3 // r
-
 string mod2division(string message);
 int ctoi(char ch);
 char itoc(int i);
-bool message_is_valid(string message);\
-
+bool message_is_valid(string message);
 
 int main()
 {
@@ -43,6 +39,9 @@ int main()
 
 string mod2division(string message)
 {
+    int message_bits = message.length();
+    int checkbits = 3;
+
     // append r 0's
     for (int i = message_bits; i < message_bits + checkbits; i++)
     {

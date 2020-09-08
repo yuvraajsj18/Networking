@@ -37,7 +37,7 @@ int main()
 
     if (fork())
     {
-        execlp("/mnt/DC84407A844058E2/CS/learn_cs/Networking/workspace/crc/receiver", "./receiver", encoded_msg.c_str(), NULL);
+        execlp("/mnt/DC84407A844058E2/CS/learn_cs/Networking/workspace/crc/forked-crc/receiver", "./receiver", encoded_msg.c_str(), NULL);
     }
 
     return 0;

@@ -9,8 +9,8 @@
 #include <string>
 using namespace std;
 
-bool decode_crc(string messsage);
-string mod2division(string message);
+bool decode_crc(string messsage, string gx);
+string mod2division(string message, string gx);
 int ctoi(char ch);
 char itoc(int i);
 bool message_is_valid(string message);
@@ -18,6 +18,7 @@ bool message_is_valid(string message);
 int main()
 {
     string message;
+    string gx = "1011";
     
     // input message
     cout << "Enter message received in binary(9 bits): ";
@@ -29,7 +30,7 @@ int main()
         exit(1);
     }
 
-    if (decode_crc(message))
+    if (decode_crc(message, gx))
     {
         cout << "Message received without error." << endl;
     }
@@ -41,9 +42,9 @@ int main()
     return 0;
 }
 
-bool decode_crc(string message)
+bool decode_crc(string message, string gx)
 {
-    string remainder = mod2division(message);
+    string remainder = mod2division(message, gx);
 
     if (stoi(remainder) == 0)
         return true;
@@ -51,10 +52,10 @@ bool decode_crc(string message)
         return false;
 }
 
-string mod2division(string message)
+string mod2division(string message, string gx)
 {
     int message_bits = message.length();
-    int checkbits = 3;
+    int checkbits = gx.length() - 1;
     
     // append r 0's
     for (int i = message_bits; i < message_bits + checkbits; i++)
@@ -62,7 +63,7 @@ string mod2division(string message)
         message += '0';
     }
 
-    string divisor = "1011";
+    string divisor = gx;
     int msg_length = message.length();
 
     int i = 0;

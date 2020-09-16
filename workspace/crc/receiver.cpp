@@ -54,14 +54,7 @@ bool decode_crc(string message, string gx)
 
 string mod2division(string message, string gx)
 {
-    int message_bits = message.length();
     int checkbits = gx.length() - 1;
-    
-    // append r 0's
-    for (int i = message_bits; i < message_bits + checkbits; i++)
-    {
-        message += '0';
-    }
 
     string divisor = gx;
     int msg_length = message.length();

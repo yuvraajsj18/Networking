@@ -1,23 +1,47 @@
 #include <iostream>
-#include <string>
 #include <cmath>
 using namespace std;
 
+string decode(string message);
 string encode(string message);
 
 int main()
 {
     string message;
-    cout<< "Enter message to send: ";
+    cout << "Enter the message received: ";
     getline(cin, message);
 
-    string codeword = encode(message);
+    string decoded_message = decode(message);
 
-    cout << "Encoded message to send: " << codeword << endl;
+    if (decoded_message != "")
+        cout << "Decoded message is " << decoded_message << endl;
+    else 
+        cout << "Message recieved is incorrect" << endl;
 
     return 0;
 }
 
+string decode(string message)
+{
+    string data_message = "";  
+    int totalbits = message.length();
+    // extract data from message
+    for (int i = 0; i < totalbits; i++)
+        if (!(log2(i+1) == int(log2(i+1))))
+            data_message += message[i];
+
+    // re-encode the message
+    string correct_encoded_msg = encode(data_message);
+
+    // check if correct encoded message is same as recieved message
+    for (int i = 0; i < totalbits; i++)
+    {
+        if (correct_encoded_msg[i] != message[i])
+            return "";
+    }
+
+    return data_message;
+}
 
 string encode(string message)
 {
@@ -59,9 +83,4 @@ string encode(string message)
 
     return codeword;
 }
-
-/*
-Enter message to send: 10101111
-Encoded message to send: 101001001111
-*/
 

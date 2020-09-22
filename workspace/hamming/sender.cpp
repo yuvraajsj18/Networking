@@ -1,3 +1,5 @@
+// sender for hamming code
+
 #include <iostream>
 #include <string>
 #include <cmath>

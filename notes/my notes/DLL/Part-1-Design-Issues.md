@@ -235,11 +235,7 @@ Let's discuss each
   2. **Rate-based Flow Control**
      - The protocol has a built-in mechanism that limits the rate at which sender may transmit data, without feedback from the receiver
 
-
-
-## Error Detection and Correction
-
-
+---
 
 
 

@@ -1,0 +1,100 @@
+Stop and wait ARQ
+Enter number of frames to send: 4
+Enter data in each frame:
+Data in frame 1: 100
+Data in frame 2: 200
+Data in frame 3: 300
+Data in frame 4: 400
+
+Choose a scenerio:
+1. Successfull transmission of all frames.
+2. Frame lost in network
+3. Acknowledgement lost in network
+4. Exit
+Choice: 1
+
+Frame 1 with data 100 successfully received
+Acknowledgement 2 successfully received
+
+
+Frame 2 with data 200 successfully received
+Acknowledgement 3 successfully received
+
+
+Frame 3 with data 300 successfully received
+Acknowledgement 4 successfully received
+
+
+Frame 4 with data 400 successfully received
+Acknowledgement 5 successfully received
+
+
+
+Choose a scenerio:
+1. Successfull transmission of all frames.
+2. Frame lost in network
+3. Acknowledgement lost in network
+4. Exit
+Choice: 2
+
+Enter frame to lost: 2
+Frame 1 with data 100 successfully received
+Acknowledgement 2 successfully received
+
+
+Frame 2 with data 200 lost in network
+No acknowledgement received
+Timer Expired, Resending
+
+
+Frame 2 with data 200 successfully received
+Acknowledgement 3 successfully received
+
+
+Frame 3 with data 300 successfully received
+Acknowledgement 4 successfully received
+
+
+Frame 4 with data 400 successfully received
+Acknowledgement 5 successfully received
+
+
+
+Choose a scenerio:
+1. Successfull transmission of all frames.
+2. Frame lost in network
+3. Acknowledgement lost in network
+4. Exit
+Choice: 3
+
+Enter acknowledgment to lost: 3
+Frame 1 with data 100 successfully received
+Acknowledgement 2 successfully received
+
+
+Frame 2 with data 200 successfully received
+Acknowledgement 3 lost in network
+Timer Expired, Resending
+
+
+Frame 2 with data 200 successfully received
+Acknowledgement 3 successfully received
+
+
+Frame 3 with data 300 successfully received
+Acknowledgement 4 successfully received
+
+
+Frame 4 with data 400 successfully received
+Acknowledgement 5 successfully received
+
+
+
+Choose a scenerio:
+1. Successfull transmission of all frames.
+2. Frame lost in network
+3. Acknowledgement lost in network
+4. Exit
+Choice: 4
+
+Exiting...⏎  

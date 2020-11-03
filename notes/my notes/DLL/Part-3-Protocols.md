@@ -114,7 +114,7 @@ For confirmation of successful receiving of frames the receiver sends **auxiliar
   }
   ```
 
-  Explanation: 
+  Explanation: This is an always running event driven algorithm, it will wait until either one of the two events happens. The responses to these two events will alternate, first network layer will request sending of a packet and it will sent after making frame and then no new frame will be sent unless an acknowledgement frame is received from the receiver.
 
 - **Receiver:**
 
@@ -132,7 +132,32 @@ For confirmation of successful receiving of frames the receiver sends **auxiliar
   }
   ```
 
-  Explanation:
+  Explanation: This is an always running event driven algorithm it will wait until it receives a frame notification from physical layer, after that it will extract the data deliver it to its network layer and send an acknowledgement frame to the sender, so that sender can send the next frame.
+  
+- **Flow Diagram:**
+
+  ![Stop and wait flow](Part-3-Protocols.assets/image-20200924113807301.png)
+
+## Noisy Channel Protocols
+
+Noisy channels has the possibility of errors, so they must also be handled together with flow control.
+
+Protocols in this category:
+
+1. Stop-and-Wait Automatic Repeat Request
+2. Go-Back-N Automatic Repeat Request
+3. Selective Repeat Automatic Repeat Request
+
+### Stop-and-Wait Automatic Repeat Request
+
+Also called as Stop-and-Wait ARQ. This protocol adds a simple *error control* mechanism to the Stop-and-Wait protocol.
+
+- Error Control :white_check_mark:
+- Flow Control :white_check_mark:
+
+
+
+
 
 
 

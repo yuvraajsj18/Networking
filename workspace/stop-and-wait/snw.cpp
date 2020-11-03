@@ -87,6 +87,7 @@ int main()
         }
     }
 
+    delete[] frames;
     return 0;
 }
 
